@@ -18,10 +18,8 @@ Vcs-Browser: http://github.com/percona/galera.git
 
 Package: percona-xtradb-cluster-galera-3.x
 Architecture: any
-Provides: galera3, percona-xtradb-cluster-galera-25
-Conflicts: galera,
-           percona-xtradb-cluster-galera,
-           percona-xtradb-cluster-galera-2.x
+Provides: galera3
+Conflicts: galera, percona-xtradb-cluster-galera
 Replaces: galera, percona-xtradb-cluster-galera, percona-xtradb-cluster-galera-3
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Galera components of Percona XtraDB Cluster
@@ -31,6 +29,8 @@ Package: percona-xtradb-cluster-garbd-3.x
 Architecture: any
 Provides: garbd-3, garbd3
 Conflicts: garbd-2, garbd2, percona-xtradb-cluster-garbd-2.x
+Breaks: percona-xtradb-cluster-galera-2.x
+Replaces: percona-xtradb-cluster-galera-2.x
 Depends: netcat-openbsd, ${misc:Depends}, ${shlibs:Depends}
 Description: Garbd components of Percona XtraDB Cluster
  This package contains the garbd of Percona XtraDB Cluster.
