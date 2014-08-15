@@ -18,8 +18,10 @@ Vcs-Browser: http://github.com/percona/galera.git
 
 Package: percona-xtradb-cluster-galera-3.x
 Architecture: any
-Provides: galera3
-Conflicts: galera, percona-xtradb-cluster-galera
+Provides: galera3, percona-xtradb-cluster-galera-25
+Conflicts: galera,
+           percona-xtradb-cluster-galera,
+           percona-xtradb-cluster-galera-2.x
 Replaces: galera, percona-xtradb-cluster-galera, percona-xtradb-cluster-galera-3
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Galera components of Percona XtraDB Cluster
