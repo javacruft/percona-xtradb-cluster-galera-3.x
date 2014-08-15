@@ -50,7 +50,6 @@ Depends: percona-xtradb-cluster-garbd-3.x (= ${binary:Version}), ${misc:Depends}
 Description: Debugging package for Percona XtraDB Cluster Garbd 3.
  This package contains the debug components Percona XtraDB Cluster Garbd 3.
 
-
 Package: percona-xtradb-cluster-galera-3
 Architecture: any
 Section: database
@@ -68,9 +67,8 @@ Description: Metapackage for latest version of garbd3.
 
 Package: percona-xtradb-cluster-galera-3-dbg
 Architecture: any
-Section: database
-Depends: percona-xtradb-cluster-galera-3 (= ${binary:Version}),
-         percona-xtradb-cluster-galera-3.x-dbg (= ${binary:Version}),
+Section: debug
+Depends: percona-xtradb-cluster-galera-3.x-dbg (= ${binary:Version}),
          percona-xtradb-cluster-garbd-3.x-dbg (= ${binary:Version}),
          ${misc:Depends}
 Description: Metapackage for latest version of debug packages.
